@@ -12,4 +12,4 @@ Threat hunting and incident investigation is a time-consuming job. If automation
 In this use-case, you will simulate the 'Red Team' operation first. After this 'Red Team' simulation, you can start the investigation using Elasticsearch and perform the automated remediation using Ansible. 
 
 ### *Red Team*
-
+![Red Team - Attack Flow](red_team_flow.png)
