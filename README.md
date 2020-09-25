@@ -9,9 +9,9 @@ F5 and Redhat Ansible provides security automation in both traditional and moder
 'Security Automation' can be used in organizations with different requirements from various personas. For example, NetSecOps and DevSecOps require different automation use-cases for remediating their own security risks. Our goal is to demonstrate the various types of 'Security Automation' use-cases for the different personas - NetSecOps, DevSecOps, and SOC(Security Operation Center). Each security team can reference our use-cases to improve their response process.   
 
 ### Getting Started
-Security Automation: NetSecOps
-Security Automation: DevSecOps
-Security Automation: SOC
+- [Security Automation: NetSecOps](https://github.com/network1211/f5-security-automation-ansible/blob/master/netsecops/README.md)
+- [Security Automation: DevSecOps](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/README.md)
+- [Security Automation: SOC](https://github.com/network1211/f5-security-automation-ansible/blob/master/soc/README.md)
 
 ### Support
 This project is a community effort to promote 'Security Automation' use-cases with F5 solutions and Redhat Ansible by F5 BD team. For any feature requests or issues, feel free to open an issue and we will give our best effort to address it.
