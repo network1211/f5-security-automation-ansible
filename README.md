@@ -1,4 +1,4 @@
-# F5 Security Automation use-cases with Ansible
+# F5 Security Automation Use-Cases with Ansible
 
 ### Summary
 The typical security response process takes an hour or sometimes in days to remediate and triage for confirmed incidents by human experts. But this approach is not scalable at all and it might not guarantee the required security remediation process on time for the organization. And this is why 'Security Automation' is getting more attention in the market. 'Security Automation' provides the required actions for confirmed security alert with a programmatically way and remediate the threat with or without human intervention. 'Security Automation' also dramatically can reduce the possibility of human error during the investigation and remediation process. 
