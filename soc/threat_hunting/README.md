@@ -2,9 +2,11 @@
 
 ## Summary
 Threat hunting and incident investigation is a time-consuming job. If automation process flags the suspicious activities with the combinations of 'weak-signals' on the network, and performs the remediation process, it can dramatically reduce the risks on the company.
+Below is the network diagram for this use-case.
+
 
 ## Prerequisites
-- ELK(Elasticsearch, Logstash, Kibana) installed
+- ELK(Elasticsearch, Logstash, Kibana) installed (required Platinum or Trial license)
 - Ansible installed at same server with ELK
 - F5 BIG-IP provisioned with AWAF/APM/LTM
 
@@ -14,3 +16,7 @@ In this use-case, you will analyze F5 telemetry logs using ELK stack. You will i
 ### *Red Team*
 While we don't include attack simulation process in this repo, it could be helpful for you to understand how whole attack process is proceeding by the attacker. 
 ![Red Team - Attack Flow](red_team_flow.png)
+
+## Setup and Configuration
+Follow the links below in order to begin setup and configuration.
+1. Importing sample CSV files to your Kibana
