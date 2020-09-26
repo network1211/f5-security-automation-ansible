@@ -9,7 +9,8 @@ Threat hunting and incident investigation is a time-consuming job. If automation
 - F5 BIG-IP provisioned with AWAF/APM/LTM
 
 ## Use-Case Scenario
-In this use-case, you will simulate the 'Red Team' operation first. After this 'Red Team' simulation, you can start the investigation using Elasticsearch and perform the automated remediation using Ansible. 
+In this use-case, you will analyze F5 telemetry logs using ELK stack. You will import the sample F5 Telemetry logs later. This sample logs include normal web-requests from users in global and you will be able to find malicious attacks as well from logs. Once you successfully import sample ELK logs to the ELK in your lab, you can perform your own 'Threat Hunting' and perform the automated remediation using Ansible. 
 
 ### *Red Team*
+While we don't include attack simulation process in this repo, it could be helpful for you to understand how whole attack process is proceeding by the attacker. 
 ![Red Team - Attack Flow](red_team_flow.png)
