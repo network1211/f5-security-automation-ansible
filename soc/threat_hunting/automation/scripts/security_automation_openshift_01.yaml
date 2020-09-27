@@ -1,0 +1,25 @@
+---
+
+- name: Change ASM Policy Enforcement Mode
+  hosts: bigip
+  connection: local
+
+  vars:
+          user: admin
+          password: yourpassword
+          validate_certs: no
+          server_port: 443
+  tasks:
+          - name: Change ASM Policy to Blocking
+            bigip_command:
+                    commands:
+                            - modify asm policy agcy_secpolicy blocking-mode enabled
+                            - publish asm policy agcy_secpolicy
+                    provider: {
+                            server: "your-f5-awaf-ipaddress",
+                            user: "{{user}}",
+                            password: "{{password}}",
+                            server_port: "{{server_port}}",
+                            validate_certs: "{{validate_certs}}"
+                            }
+

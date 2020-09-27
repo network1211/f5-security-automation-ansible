@@ -1,0 +1,63 @@
+{
+  "trigger": {
+    "schedule": {
+      "interval": "5m"
+    }
+  },
+  "input": {
+    "search": {
+      "request": {
+        "search_type": "query_then_fetch",
+        "indices": [
+          "f5bd-elk*"
+        ],
+        "rest_total_hits_as_int": true,
+        "body": {
+          "query": {
+            "bool": {
+              "must": [
+                {
+                  "match": {
+                    "waf_status.keyword": "alarmed"
+                  }
+                },
+                {
+                  "terms": {
+                    "waf_severity.keyword": ["Critical", "Error"]
+                  }
+                },
+                {
+                  "terms": {
+                    "geoip.country_code2.keyword": ["CN", "KP", "RU"]
+                  }
+                },
+		{
+                  "range": {
+                    "time": {
+                      "gte": "2020-04-27T00:00:00",
+                      "lte": "2020-05-02T00:00:00"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "condition": {
+    "compare": {"ctx.payload.hits.total" : { "gt" : 0 }}
+  },
+  "actions": {
+    "logstash_exec": {
+        "webhook" : {
+            "method" : "POST",
+            "host" : "localhost",
+            "port" : 9999,
+            "path" : "/{{watch_id}}",
+            "body" : "{{ctx.payload.hits.hits[0].clientip}}"
+        }
+    }
+  }
+} 
