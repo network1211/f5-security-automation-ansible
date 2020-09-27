@@ -1,5 +1,5 @@
-## Creating Kibana Dashboard for SOC analysts
-1. Create 'Web Access' monitoring map
+
+### Create 'Web Access' monitoring map
 
    *Kibana, Maps -> New map*
     ![](images/dashboaard-map-1.png)
@@ -22,3 +22,5 @@
    *Save your map*
     ![](images/dashboaard-map-7.png)
 
+   *Verify your map*
+    ![](images/dashboard-map-8.png)
