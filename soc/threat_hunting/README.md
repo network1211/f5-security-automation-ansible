@@ -21,5 +21,5 @@ While we don't include attack simulation process in this repo, it could be helpf
 Follow the links below in order to begin setup and configuration.
 1. [Importing sample CSV files to your Kibana](https://github.com/network1211/f5-security-automation-ansible/blob/master/soc/threat_hunting/import_elk/import_elk.md)
 2. [Creating Kibana Dashboard for SOC analysts](https://github.com/network1211/f5-security-automation-ansible/blob/master/soc/threat_hunting/kibana_dashboard/dashboard-main.md)
-3. Simulating 'Threat Hunting'
+3. [Simulating 'Threat Hunting'](https://github.com/network1211/f5-security-automation-ansible/blob/master/soc/threat_hunting/hunting/hunting.md)
 4. Automated Remediation using Ansible
