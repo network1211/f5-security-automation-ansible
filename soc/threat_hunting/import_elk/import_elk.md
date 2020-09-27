@@ -52,7 +52,14 @@ output {
 
 2. Configuring Index Pattern 
 *Go to Kibana, 'Management' -> 'Index pattern'*
+![](import-1.png)
+![](import-2.png)
+![](import-3.png)
+![](import-4.png)
 
+3. Verifying imported data
+*Go to Kibana, 'Discover' -> Set time range from '27th Apr 2020 @ 00:00:00' to '2nd May 2020 @ 00:00:00'. -> Click 'Refresh'
+![](import-5.png)
 
 
 
