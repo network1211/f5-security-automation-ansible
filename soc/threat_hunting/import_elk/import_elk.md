@@ -1,25 +1,59 @@
 # Importing sample CSV files to your Kibana
 
 ## Configuration Step
-### *Please make sure that your Elasticsearch already incliude 'Elastic Platinum License' or 'Trial License'.* 
+### *Please make sure that your Logstash already incliudes 'Geo-plugin'.* 
+### *You should download 'GeoLite2-City.mmdb' file in your logstash server first before proceeding this step. 
 
-1. Step 1
-![step1](import_sample_elk-1.png)
+1. Creating Logstash Conf file to import CSV file
+```
+logstash_csv.conf
 
-2. Step 2
-![step2](import_sample_elk-2.png)
+input {
+    file {
+        path => "/your_file_path/f5bd-sample-elk-2.csv"
+        start_position => "beginning"
+        sincedb_path => "/dev/null"
+	}
+}
 
-3. Step 3
-![step3](import_sample_elk-3.png)
+filter {
+        csv {
+          columns => [ "time", "client_platform", "client_reputation", "content_length", "content_type", "dest_ip", "host", "http_domain", "ip_byte
+s_in", "ip_bytes_out", "login_result", "referer", "session_id", "session_state", "source_ip", "total_byte_in", "total_byte_out", "uri_path", "uri_q
+uery", "username", "waf_detected", "waf_policy", "waf_severity", "waf_sig_name", "waf_status", "waf_support_id" ]
+        }
 
-4. Step 4
-![step4](import_sample_elk-4.png)
+        geoip {
+          source => "source_ip"
+          database => "/etc/logstash/GeoLite2-City.mmdb"
+        }
 
-5. Step 5
-![step5](import_sample_elk-5.png)
+	date {
+          match => [ "time" , "yyyy-MM-dd'T'HH:mm:ss.SSS" ]
+        }
 
-6. Step 6
-![step6](import_sample_elk-6.png)
+	mutate {
+		remove_field => ["message", "path", "@timestamp"]
+		convert => ["ip_bytes_in", "integer"]
+		convert => ["ip_bytes_out", "integer"]
+		convert => ["total_byte_in", "integer"]
+		convert => ["total_byte_out", "integer"]
+		convert => ["content_length", "integer"]
+	}
+}
 
-7. Step 7
-![step7](import_sample_elk-7.png)
+output {
+         elasticsearch {
+                hosts => ["127.0.0.1:9200"]
+                index => "f5bd-elk"
+        }
+}
+```
+
+2. Configuring Index Pattern 
+*Go to Kibana, 'Management' -> 'Index pattern'*
+
+
+
+
+
