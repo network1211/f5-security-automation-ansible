@@ -1,3 +1,5 @@
+## Creating Kibana Dashboard for SOC analysts
+
 1. Monitoring number of WAF alerts
 2. Monitoring number of unique Source IP Addresses
 3. Monitoring Data Transfer from/to servers
