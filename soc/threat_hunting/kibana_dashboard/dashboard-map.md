@@ -22,5 +22,4 @@
    *Save your map*
     ![](images/dashboaard-map-7.png)
 
-   *Verify your map*
-    ![](images/dashboard-map-8.png)
+
