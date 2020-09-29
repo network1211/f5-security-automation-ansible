@@ -32,7 +32,7 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 ![Demo flow](images/diagram.png)
 
 ## Security Automation Process
-
+![automation process](images/automation_process.png)
 
 ## Setup and Configuration
 Follow the links below in order to begin setup and configuration.
