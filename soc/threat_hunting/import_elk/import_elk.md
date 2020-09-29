@@ -51,7 +51,7 @@ output {
 ```
 
 2. Configuring Index Pattern 
-*Go to Kibana, 'Management' -> 'Index pattern'*
+- *Go to Kibana, 'Management' -> 'Index pattern'*
 ![](import-1.png)
 ![](import-2.png)
 ![](import-3.png)
