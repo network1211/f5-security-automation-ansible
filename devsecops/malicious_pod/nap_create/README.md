@@ -44,7 +44,7 @@ CMD ["sh", "/entrypoint.sh"]
 
 And build your docker image for NAP. (You have to place your NGINX 'crt' and 'key' files on the same directory.)
 ```
-sudo docker build --no-cache -t app-protect
+sudo docker build --no-cache -t app-protect .
 ```
 
 
