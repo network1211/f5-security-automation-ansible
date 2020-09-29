@@ -262,6 +262,10 @@ service/critical-app created
 deployment.apps/critical-app-v1 created
 j.lee$ oc create -f nap-config.yaml 
 configmap/critical-app-conf created
+SIN-ML-00030074:nap_case_02 j.lee$ oc get pods -o wide
+NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE                                             NOMINATED NODE   READINESS GATES
+critical-app-v1-5c6546765f-wjhl9   2/2     Running   0          21s   10.129.2.71   ip-10-0-180-68.ap-southeast-1.compute.internal   <none>           <none>
+SIN-ML-00030074:nap_case_02 j.lee$
 ```
 
 
