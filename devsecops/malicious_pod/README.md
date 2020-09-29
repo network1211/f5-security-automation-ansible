@@ -40,4 +40,5 @@ Follow the links below in order to begin setup and configuration.
 1. [Prepare the 'NGINX App Protect' container image](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/nap_create/README.md)
 2. [Install demo applications, and NGINX App Protect on the OpenShift](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/install_app/README.md)
 3. [Create the Ansible Playbook](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/create_ansible/README.md)
-4. Configuring the 'Watcher' and 'Logstash' of Elasticsearch.
+4. [Configuring the 'Watcher' and 'Logstash' of Elasticsearch](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/elk_config/README.md)
+5. Verify the demo
