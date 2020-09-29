@@ -16,7 +16,22 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 - Minimum 1 x OCP cluster installed.
 
 ## Use-Case Scenario
-In this use-case, you will analyze F5 telemetry logs using ELK stack.  These sample logs include normal web-requests from users global, and you will be able to find malicious attacks from logs. Once you successfully import sample ELK logs to the ELK in your lab, you can perform your own 'Threat Hunting' and complete the automated remediation using Ansible. 
+1. The malware of 'Phishing email' infects the developer's laptop. 
+2. Attacker steals the ID/PW of the developer using the malware. In this demo, the stolen ID is 'dev_user.' 
+3. Attacker login the 'Test App' on the 'dev-test01' namespace, which is owned by the 'dev_user'. 
+4. Attacker starts the network-scanning on the internal subnet of the OpenShift cluster. And the attacker finds the 'critical-app' application.
+5. Attacker starts the web-based attack against 'critical-app'. 
+6. The 'critical-app' is protected by NGINX App Protect; thus, the attack traffic is blocked by NGINX immediately. 
+7. NGINX exports the alert details to the external Elasticsearch.
+8. If this specific alert meets the pre-defined condition, Elasticsearch will trigger the pre-defined Ansible playbook. 
+9. Ansible playbook access to OpenShift and delete the malicious 'POD" automatically. 
 
-### *Red Team*
-While we don't include the attack simulation process in this repo, this diagram could help you understand how the whole attack process is proceeding by the attacker.
+[Demo flow](images/diagram.png)
+
+## Setup and Configuration
+Follow the links below in order to begin setup and configuration.
+
+1. Prepare the 'NGINX App Protect' container image.
+2. Install demo applications, and NGINX App Protect on the OpenShift.
+3. Create the Ansible Playbook.
+4. Configuring the 'Watcher' of Elasticsearch.
