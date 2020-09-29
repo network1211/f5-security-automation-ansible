@@ -1,10 +1,10 @@
 ## Configuring the 'Watcher' and 'Logstash' of Elasticsearch
 
 1. Configuring the 'Watcher' of Kibana
-- You need Elastic Platinum license or Eval license to use this feature on the Kibana. 
+- You need an Elastic Platinum license or Eval license to use this feature on the Kibana. 
 - Go to Kibana UI. 
 - Management -> Watcher -> Create -> Create advanced watcher
-- Copy and paste below json code
+- Copy and paste below JSON code
 
 ```
 watcher_ocp.json
