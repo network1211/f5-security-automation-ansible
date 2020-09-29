@@ -12,7 +12,7 @@ F5 and Redhat Ansible provides security automation in both traditional and moder
 1. Security Automation: NetSecOps
     - Automated F5 AFM Rule Management
 2. Security Automation: DevSecOps
-    - Automated Remediation of Unauthorized POD in OpenShift environment 
+    - [Automated Remediation of Unauthorized POD in OpenShift environment](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/README.md) 
 3. Security Automation: SOC
     - [Automated Threat Hunting and Security Remediation](https://github.com/network1211/f5-security-automation-ansible/blob/master/soc/threat_hunting/README.md)
 
