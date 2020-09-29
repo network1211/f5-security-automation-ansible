@@ -148,11 +148,11 @@ $
 
 6. Verify the logs in Kibana dashboard
 - You shoudl be able to see the NAP alerts on your ELK.
-![](images/elk_dashboard.png)
+![](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/images/elk_dashboard.png)
 
 7. Verify the Ansible terminates the malicious pod
 - Ansible deletes the malicious POD
-![](images/terminating_pod.png)
+![](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/images/terminating_pod.png)
 
 
 
