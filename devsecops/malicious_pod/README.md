@@ -26,7 +26,7 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 8. If this specific alert meets the pre-defined condition, Elasticsearch will trigger the pre-defined Ansible playbook. 
 9. Ansible playbook access to OpenShift and delete the malicious 'POD" automatically. 
 
-[Demo flow](images/diagram.png)
+![Demo flow](images/diagram.png)
 
 ## Setup and Configuration
 Follow the links below in order to begin setup and configuration.
