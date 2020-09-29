@@ -2,7 +2,7 @@
 
 ## Configuration Step
 ### *Please make sure that your Logstash already incliudes 'Geo-plugin'.* 
-### *You should download 'GeoLite2-City.mmdb' file in your logstash server first before proceeding this step. 
+### *You should download 'GeoLite2-City.mmdb' file in your logstash server first before proceeding this step. You can download it from the Maxmind website.(https://www.maxmind.com/en/geoip2-country-database)* 
 
 1. Creating Logstash Conf file to import CSV file
 ```
