@@ -5,7 +5,7 @@
 
 #### *Admin Console - Kubeadmin*
 1. Deploy the critical app
-You have to replace the image path within the yaml file by your NAP download path which you configured in a previous step. 
+You have to replace the image path within the yaml file with your NAP download path which you configured in a previous step. 
 
 ```
 critical-app-with-nap.yaml
