@@ -1,8 +1,8 @@
 # Importing sample CSV files to your Kibana
 
 ## Configuration Step
-### *Please make sure that your Logstash already incliudes 'Geo-plugin'.* 
-### *You should download 'GeoLite2-City.mmdb' file in your logstash server first before proceeding this step. You can download it from the Maxmind website.(https://www.maxmind.com/en/geoip2-country-database)* 
+### *Please make sure that your Logstash already includes 'Geo-plugin.'* 
+### *You should download the 'GeoLite2-City.mmdb' file in your logstash server before proceeding with this step. You can download it from the Maxmind website.(https://www.maxmind.com/en/geoip2-country-database)* 
 
 1. Creating Logstash Conf file to import CSV file
 ```
@@ -58,7 +58,7 @@ output {
 ![](import-4.png)
 
 3. Verifying imported data
-*Go to Kibana, 'Discover' -> Set time range from '27th Apr 2020 @ 00:00:00' to '2nd May 2020 @ 00:00:00'. -> Click 'Refresh'
+*Go to Kibana, 'Discover' -> Set time range from '27th Apr 2020 @ 00:00:00' to '2nd May 2020 @ 00:00:00'. -> Click 'Refresh'*
 ![](import-5.png)
 
 
