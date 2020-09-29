@@ -6,8 +6,8 @@
 #### *You need to have your own 'Docker Hub' account.*
 
 ##### Create Dockerfile to build the 'NGINX App Protect' base image
-You can find more detailed explanation from the document portal of the NGINX [here](https://docs.nginx.com/nginx-app-protect/admin-guide/#docker-deployment).
-Below is the sameple 'Dockerfile' config which used in this demo. 
+You can find a more detailed explanation from the document portal of the NGINX [here](https://docs.nginx.com/nginx-app-protect/admin-guide/#docker-deployment).
+Below is the sample 'Dockerfile' config which used in this demo. 
 
 ```
 Dockerfile
@@ -89,7 +89,7 @@ http {
 
 And logout from the NAP image using 'exit' command. 
 
-Now, you need to login to your docker account using command line below. 
+Now, you need to login to your docker account using the command line below. 
 ```
 root@James-Ext-ubuntu:/home/james# docker login --username=yourusername 
 Password: yourpassword
