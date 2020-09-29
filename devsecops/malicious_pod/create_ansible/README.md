@@ -1,7 +1,7 @@
 ## Create the Ansible Playbook
 
 1. Create the Ansible playbook
-You have to add your file path in the yaml file. 
+- You have to add your file path in the yaml file. 
 
 ```
 ansible_ocp.yaml
