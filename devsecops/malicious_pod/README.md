@@ -12,17 +12,17 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 - ELK(Elasticsearch, Logstash, Kibana) installed (required Platinum or Trial license)
 - Ansible installed on the same server with ELK
 - Evaluation license of NAP(NGINX App Protect)
-- You can reqeust the evaluation license of NGINX App Protect in [here](https://www.nginx.com/free-trial-request/).
+- You can request the evaluation license of the NGINX App Protect in [here](https://www.nginx.com/free-trial-request/).
 - Minimum 1 x OCP cluster installed.
 - You have to prepare two laptops - one for OCP admin console, one for dev_user console(infected machine)
 
 ## Use-Case Scenario
 1. The malware of 'Phishing email' infects the developer's laptop. 
 2. Attacker steals the ID/PW of the developer using the malware. In this demo, the stolen ID is 'dev_user.' 
-3. Attacker login the 'Test App' on the 'dev-test01' namespace, which is owned by the 'dev_user'. 
+3. Attacker login the 'Test App' on the 'dev-test01' namespace, owned by the 'dev_user'. 
 4. Attacker starts the network-scanning on the internal subnet of the OpenShift cluster. And the attacker finds the 'critical-app' application.
 5. Attacker starts the web-based attack against 'critical-app'. 
-6. The 'critical-app' is protected by NGINX App Protect; thus, the attack traffic is blocked by NGINX immediately. 
+6. NGINX App Protect protects the 'critical-app'; thus, the attack traffic is blocked immediately. 
 7. NGINX exports the alert details to the external Elasticsearch.
 8. If this specific alert meets the pre-defined condition, Elasticsearch will trigger the pre-defined Ansible playbook. 
 9. Ansible playbook access to OpenShift and delete the malicious 'POD" automatically. 
@@ -35,10 +35,10 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 ![automation process](images/automation_process1.png)
 
 ## Setup and Configuration
-Follow the links below in order to begin setup and configuration.
+Follow the links below to begin setup and configuration.
 
 1. [Prepare the 'NGINX App Protect' container image](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/nap_create/README.md)
 2. [Install demo applications, and NGINX App Protect on the OpenShift](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/install_app/README.md)
 3. [Create the Ansible Playbook](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/create_ansible/README.md)
 4. [Configuring the 'Watcher' and 'Logstash' of Elasticsearch](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/elk_config/README.md)
-5. Simulate the demo
+5. [Simulate the demo](https://github.com/network1211/f5-security-automation-ansible/blob/master/devsecops/malicious_pod/simulate_demo/README.md)
