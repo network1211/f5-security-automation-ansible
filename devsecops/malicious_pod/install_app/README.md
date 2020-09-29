@@ -262,13 +262,82 @@ service/critical-app created
 deployment.apps/critical-app-v1 created
 j.lee$ oc create -f nap-config.yaml 
 configmap/critical-app-conf created
-SIN-ML-00030074:nap_case_02 j.lee$ oc get pods -o wide
+j.lee$ oc get pods -o wide
 NAME                               READY   STATUS    RESTARTS   AGE   IP            NODE                                             NOMINATED NODE   READINESS GATES
 critical-app-v1-5c6546765f-wjhl9   2/2     Running   0          21s   10.129.2.71   ip-10-0-180-68.ap-southeast-1.compute.internal   <none>           <none>
-SIN-ML-00030074:nap_case_02 j.lee$
+j.lee$
 ```
 
+#### *dev_user Console - infected machine*
+1. Login to OCP cluster using 'dev_user' ID
+Once you successfully login with ID 'dev_user', you have to create the project.
+```
+PS C:\Users\ljwca> oc login -u dev_user
+Authentication required for https://yourocpdomain.com:6443 (openshift)
+Username: dev_user
+Password:
+Login successful.
 
+PS C:\Users\ljwca> oc new-project dev-test01
+Now using project "dev-test01" on server "https://yourocpdomain.com:6443".
 
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app ruby~https://github.com/sclorg/ruby-ex.git
+
+to build a new example application in Ruby. Or use kubectl to deploy a simple Kubernetes application:
+
+    kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
+
+PS C:\Users\ljwca>
+```
+
+2. Deploy the 'test-app'
+```
+devapp_deployment.yaml
+
+##################################################################################################
+# Deploy Dev App
+##################################################################################################
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-test-v1
+  labels:
+    app: dev-test
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dev-test
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: dev-test
+        version: v1
+    spec:
+      containers:
+      - env:
+        - name: TZ
+          value: UTC
+        name: dev-test
+        image: network1211/ubuntu02:5.0
+        imagePullPolicy: IfNotPresent
+        command: [ "bash" ]
+        stdin: true
+---
+```
+
+```
+PS C:\Users\ljwca> oc create -f .\2-4_devapp-deployment.yaml
+deployment.apps/dev-test-v1 created
+PS C:\Users\ljwca>
+PS C:\Users\ljwca> oc get pods -o wide
+NAME                           READY   STATUS    RESTARTS   AGE   IP            NODE                                              NOMINATED NODE   READINESS GATES
+dev-test-v1-674f467644-t94dc   1/1     Running   0          6s    10.128.2.38   ip-10-0-155-159.ap-southeast-1.compute.internal   <none>           <none>
+PS C:\Users\ljwca>
+```
 
 
