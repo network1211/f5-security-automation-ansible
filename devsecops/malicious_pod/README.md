@@ -14,6 +14,7 @@ The NAP can monitor the traffic traversing namespace boundaries between pods and
 - Evaluation license of NAP(NGINX App Protect)
 - You can reqeust the evaluation license of NGINX App Protect in [here](https://www.nginx.com/free-trial-request/).
 - Minimum 1 x OCP cluster installed.
+- You have to prepare two laptops - one for OCP admin console, one for dev_user console(infected machine)
 
 ## Use-Case Scenario
 1. The malware of 'Phishing email' infects the developer's laptop. 
